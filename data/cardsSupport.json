@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "src": "images/cardsSupport/1.webp",
+    "span": "Besplatna dostava",
+    "desc": "preko 10.000 RSD",
+    "alt": "Besplatna dostava"
+  },
+  {
+    "id": 2,
+    "src": "images/cardsSupport/2.webp",
+    "desc": "podrška",
+    "span": "Call centar",
+    "alt": "Call centar"
+  },
+  {
+    "id": 3,
+    "src": "images/cardsSupport/3.webp",
+    "desc": "14 dana od kupovine",
+    "span": "Povrat robe",
+    "alt": "Povrat robe"
+  },
+  {
+    "id": 4,
+    "src": "images/cardsSupport/4.webp",
+    "desc": "do 24 mesečne rate",
+    "span": "Odloženo plaćanje",
+    "alt": "Odlozeno placanje"
+  }
+]

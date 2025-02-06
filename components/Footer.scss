@@ -1,0 +1,28 @@
+.footer-middle-headings {
+  margin: 0rem;
+}
+footer .accordion-header .accordion-button {
+  color: white;
+  background-color: var(--black-color);
+}
+footer .accordion-collapse.collapse.show,
+footer .accordion-collapse.collapsing {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+footer .accordion-header {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+footer .accordion-body {
+  padding: 0.6rem 2rem;
+}
+footer .accordion-button:not(.collapsed) {
+  color: white;
+}
+footer .accordion-button:hover {
+  color: rgb(219, 219, 219);
+}
+footer .accordion-button::after {
+  // background-image: url(../assets/images/elements/arrow-down.png);
+}

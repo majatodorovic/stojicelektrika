@@ -1,0 +1,53 @@
+.buttonTab {
+  button {
+    position: relative;
+    padding: 0.3rem 0;
+    background-color: transparent;
+    font-size: 1rem;
+    margin: 0 1.3rem;
+    &.active {
+      font-weight: 600;
+      font-size: 1rem;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4.5px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 13px;
+        background-color: red;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: red;
+      }
+    }
+  }
+  &.tabCategoryButton {
+    button {
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      padding: 0.8rem 0.3rem;
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonTab {
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}

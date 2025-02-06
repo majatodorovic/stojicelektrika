@@ -1,0 +1,12 @@
+.container {
+  span {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .titles {
+    display: none;
+  }
+}

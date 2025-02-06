@@ -1,0 +1,213 @@
+.blogHolder {
+  max-width: 100%;
+  padding: 0 7rem;
+  margin: 2rem auto;
+  .titleHolder {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h5 {
+      margin: 0 0 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 500 !important;
+    }
+
+    p {
+      margin-bottom: 4rem;
+      text-align: center;
+      width: min(800px, 98%);
+      margin-inline: auto;
+      font-size: 0.875rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+  .postHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    &:hover {
+      img {
+        cursor: pointer;
+        transform: scale(107%);
+      }
+      .imgHolder {
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+    .txtHolder {
+      padding: 2rem 1rem;
+      width: 100%;
+
+      h5 {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+        color: var(--dark-gray-color);
+      }
+      span.date {
+        color: var(--dark-gray-color);
+        font-weight: 200;
+        font-style: italic;
+        font-size: 0.7rem;
+      }
+      span.more {
+        color: var(--dark-gray-color);
+        font-weight: 300;
+        &:hover {
+          color: var(--dark-red-color);
+          transition: color 0.2s ease-in-out;
+        }
+      }
+      p {
+        color: var(--dark-gray-color);
+        white-space: nowrap;
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0.7rem 0;
+      }
+    }
+    .imgHolder {
+      width: 100%;
+      height: 19rem;
+      min-height: 12rem;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        content: "";
+        background-color: rgba(51, 62, 72, 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+  .loadMore {
+    color: var(--red-color);
+    background: var(--white-color);
+    border: 1px solid var(--red-color);
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto 0 auto;
+    max-width: 250px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.BlogPostHolder {
+  padding: 0 7rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  .titleHolder {
+    max-width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    span.date {
+      color: var(--dark-gray-color);
+      font-weight: 200;
+      font-style: italic;
+      font-size: 0.813rem;
+    }
+  }
+  .imgHolder {
+    position: relative;
+    height: 19rem;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+  h5 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 500 !important;
+  }
+  .txtHolder {
+    width: 50%;
+    margin: 2rem auto 2rem auto;
+    img {
+      margin-top: 3rem;
+      width: 100%;
+    }
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .signature {
+    font-size: 1.6rem;
+    font-weight: 600;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 3rem;
+    color: var(--darkGrayPrimary);
+  }
+}
+
+@media (max-width: 1200px) {
+  .BlogPostHolder {
+    .imgHolder {
+      padding: 0;
+      height: 10rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blogHolder {
+    max-width: 94%;
+    width: 94%;
+    padding: 0;
+    .postHolder {
+      margin: 0rem auto 2rem auto;
+      .imgHolder {
+        height: 14rem;
+        min-height: 14rem;
+      }
+    }
+  }
+
+  .blogHolder {
+    .titleHolder {
+      margin: 9% 0rem 2rem 0rem;
+      h5 {
+        font-size: 2.8rem;
+      }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .BlogPostHolder {
+    .titleHolder {
+      width: 100%;
+      margin: 9% auto 5em auto;
+    }
+    .txtHolder {
+      width: 100%;
+      padding: 0rem 1rem;
+    }
+  }
+}

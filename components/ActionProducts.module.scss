@@ -1,0 +1,115 @@
+.action-product-list-title {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  p {
+    color: #16392f;
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
+  h3 {
+    font-weight: 600;
+  }
+}
+.custom-background {
+  background: #f0f0f4;
+  padding: 3rem 0rem 1rem 0rem;
+}
+.link {
+  text-decoration: none;
+}
+.action-product-holder {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  .info-holder p {
+    line-height: 1.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: black;
+    text-decoration: none;
+  }
+  .info-holder p.old-price {
+    color: var(--red-color);
+    font-size: 14px;
+    margin-bottom: 0.125rem;
+    text-decoration: line-through;
+    min-height: 1rem;
+  }
+  .info-holder p.price {
+    font-weight: 600;
+  }
+  .info-holder span.badge-action {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: #333333;
+    color: white;
+    padding: 0.125rem 0.9rem;
+    border-radius: 0.4rem;
+    font-size: 14px;
+  }
+  .info-holder span.badge-action-percent {
+    position: absolute;
+    left: 1rem;
+    top: 2.9rem;
+    background: var(--red-color);
+    color: white;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 13px;
+  }
+  .wishlist {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+  .wishlist:hover {
+    background-color: var(--red-color);
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+  .add-to-cart {
+    background: #333;
+    padding: 0.4rem 0.8rem 1.4rem 1.2rem;
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    border-radius: 0.8rem 0rem 0.8rem 0rem;
+    width: 4rem;
+    height: 2.4rem;
+    display: none;
+  }
+  .add-to-cart img {
+    width: 60%;
+  }
+}
+
+.image-holder {
+  position: relative;
+}
+.action-product-holder:hover {
+  cursor: pointer;
+}
+.action-product-holder:hover .add-to-cart {
+  display: block;
+}
+.action-product-holder .add-to-cart:hover {
+  background-color: var(--red-color);
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .add-to-cart {
+    display: block !important;
+  }
+}

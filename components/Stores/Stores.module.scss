@@ -1,0 +1,62 @@
+.stores {
+  margin-bottom: 3rem;
+  h5 {
+    margin-bottom: 1rem;
+    font-weight: 500 !important;
+    font-size: 1.3rem;
+  }
+  .storesGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
+    .storeCard {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: var(--gray-color);
+      padding: 1rem;
+      border-radius: 7px;
+      h6 {
+        position: relative;
+        width: fit-content;
+        margin-bottom: 0.7rem;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          width: 1rem;
+          background-color: var(--croonus-mediumGray);
+          height: 1px;
+          bottom: -2px;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1500px) {
+  .stores .storesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .stores .storesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .stores .storesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stores .storesGrid {
+    grid-template-columns: 1fr;
+  }
+}

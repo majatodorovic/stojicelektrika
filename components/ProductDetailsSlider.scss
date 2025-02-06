@@ -1,0 +1,214 @@
+.top-margin-1 {
+  margin-top: 1rem;
+}
+.product-details-slider-container .row {
+  justify-content: space-around;
+}
+.carousel-main {
+  button:focus {
+    box-shadow: none;
+  }
+  .carousel-cell:hover {
+    cursor: pointer;
+  }
+  .carousel-cell {
+    width: 100%;
+    height: 300px;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    counter-increment: carousel-cell;
+    img {
+      content: counter(carousel-cell);
+    }
+  }
+  .flickity-viewport {
+    height: 300px !important;
+  }
+}
+
+.carousel-nav {
+  width: 300px;
+  height: 100px;
+  transform: rotate(90deg) translate(30px, -100%);
+  transform-origin: left top;
+  button:focus {
+    box-shadow: none;
+  }
+  @media screen and (max-width: 1200px) {
+    transform: rotate(90deg) translate(30px, -50%);
+  }
+  .flickity-viewport {
+    height: 100px !important;
+  }
+  .carousel-cell-1 {
+    transform: rotate(-90deg);
+    width: 80px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    counter-increment: carousel-cell;
+    img {
+      transform: rotate(270deg);
+      height: auto;
+      width: 100%;
+      padding: 0;
+      content: counter(carousel-cell);
+    }
+    /* selected cell */
+    &.is-nav-selected {
+      border: 1px solid var(--border-color);
+    }
+  }
+  .carousel-cell-1:hover {
+    border: 1px solid var(--border-color);
+  }
+
+  .flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+
+    &.previous {
+      left: -40px;
+    }
+    &.next {
+      right: -40px;
+    }
+  }
+}
+.main-details-under-primary-image {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.main-details-under-primary-image-button {
+  object-fit: contain;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  span {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  img {
+    width: 20px;
+  }
+}
+.main-details-under-primary-image-button.active,
+.main-details-under-primary-image-button:hover {
+  span {
+    border-bottom: 1px solid var(--primary-color);
+  }
+}
+.main-details-under-primary-image-button:hover {
+  box-shadow: 0 10px 5px -10px var(--border-color);
+}
+.slick-small-img {
+  width: 100%;
+}
+.slick-small-img-div {
+  width: 100%;
+  position: relative;
+  .test {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+  }
+}
+.slick-slider {
+  position: relative;
+}
+.nextArrow {
+  height: 100%;
+  right: 20px;
+}
+.prevArrow {
+  height: 100%;
+  left: 20px;
+}
+.arrow {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  color: var(--croonus-lightGray);
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    color: var(--primary-color);
+    transition: all 0.15s ease-in-out;
+  }
+  .slick-next-arrow {
+    height: 20px;
+  }
+  .slick-prev-arrow {
+    height: 20px;
+  }
+}
+.slick-list {
+  height: fit-content;
+}
+.vertical-slider {
+  .slick-active:hover {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 98%;
+      width: 98%;
+      left: 1%;
+      top: 1%;
+      border: 1px solid var(--croonus-lightMedGray);
+    }
+  }
+  .slick-track {
+    height: unset !important;
+  }
+}
+.slick-flex-down {
+  display: flex;
+  align-items: flex-end;
+}
+.big-slick-slider {
+  .slick-list {
+    width: 100%;
+  }
+  display: flex;
+  .arrow {
+    justify-content: center;
+    align-items: center;
+  }
+  position: relative;
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   height: 100%;
+  //   width:100%;
+  //   left:0;
+  //   top:0;
+  //   border:1px solid var(--croonus-lightMedGray);
+  // }
+}
+
+@media (min-width: 768px) {
+  .vertical-slider {
+    top: -5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slick-flex-down {
+    justify-content: center;
+    order: 1;
+  }
+}

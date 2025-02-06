@@ -1,0 +1,43 @@
+.action-banners-holder {
+  padding-top: 4rem;
+}
+.bannerContainer {
+  width: 100%;
+  position: relative;
+  height: 250px;
+
+  span {
+    height: 100% !important;
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .wrappText {
+    position: absolute;
+    top: 35px;
+    width: 250px;
+    color: var(--dark-gray-color);
+    h5 {
+      font-size: 2.05rem;
+      line-height: normal;
+    }
+    a {
+      color: var(--dark-gray-color);
+      display: block;
+      margin-top: 20px;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 992.98px) {
+  .action-banners-holder img:first-child {
+    margin-bottom: 1rem;
+  }
+  .action-banners-holder {
+    padding-top: 2rem;
+  }
+}

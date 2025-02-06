@@ -1,0 +1,33 @@
+.breadcrumbs-holder {
+  padding: 1rem 0rem;
+  ul {
+    display: inline-flex;
+    padding-left: unset;
+    li {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+  ul li:after {
+    content: "/";
+    margin: 0rem 0.6rem;
+  }
+  ul li:last-child:after {
+    content: "";
+  }
+  .breadcrumbs-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+  }
+}
+
+// RESPONSIVE
+
+@media (max-width: 992px) {
+  .breadcrumbs-holder {
+    display: none;
+  }
+}

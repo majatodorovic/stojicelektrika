@@ -1,0 +1,30 @@
+.actionProducts {
+  background-color: var(--gray-color);
+  padding: 1rem 0 0 0;
+  h5 {
+    margin: 1rem 0 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 500 !important;
+  }
+  .ruza2 {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  .sort-container {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    span {
+      padding: 0 0.5rem;
+    }
+    .sort-span {
+      select {
+        width: 100%;
+        border: 1px solid var(--light-gray-color);
+        padding: 0.4rem 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

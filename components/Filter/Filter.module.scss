@@ -1,0 +1,8 @@
+.checkboxLabel {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

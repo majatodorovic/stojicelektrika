@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "src": "static/images/bannersAction/1.webp",
+    "title": "Specijalni rabati za B2B korisnike!",
+    "alt": "Besplatna dostava"
+  },
+  {
+    "id": 2,
+    "src": "static/images/bannersAction/2.webp",
+    "title": "Mi smo vaša podrška",
+    "alt": "Call centar"
+  }
+]

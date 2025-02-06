@@ -1,0 +1,49 @@
+.custom-caption {
+  right: unset;
+  left: 8%;
+  color: var(--white-color);
+  z-index: 2;
+  bottom: 2rem;
+}
+.button-caption {
+  background: var(--red-color);
+  border: none;
+  color: white;
+  border-radius: 0.4rem;
+  padding: 0.125rem 1.2rem;
+  text-transform: uppercase;
+}
+
+.button-caption:hover {
+  background-color: #cf0007;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px;
+}
+
+.desktop-display {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.mobile-display {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-display {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    height: 400px !important;
+  }
+  .desktop-display {
+    display: none !important;
+  }
+}
