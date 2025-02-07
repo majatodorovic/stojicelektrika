@@ -7,13 +7,24 @@ const Row = dynamic(() => import("react-bootstrap/Row"));
 const Col = dynamic(() => import("react-bootstrap/Col"));
 
 const ActionBanners = ({ actionBanners }) => (
-  <div className={classes.actionBanners}>
+  <div className={`${classes.actionBanners}`}>
     <div className="container">
       <Row>
         {(actionBanners ?? []).map((banner) => (
-          <Col className={classes.box} key={banner.id} sm={12} md={6} lg={6} xl={6}>
-            <Link href={banner.url || "#"} target={banner.target === "blank" ? "_blank" : undefined} rel={banner.target === "blank" ? "noopener noreferrer" : undefined}>
-              <div className={classes.actionBanner}>
+          <Col
+            className={`${classes.box}`}
+            key={banner.id}
+            sm={12}
+            md={6}
+            lg={6}
+            xl={6}
+          >
+            <Link
+              href={banner.url || "#"}
+              target={banner.target === "blank" ? "_blank" : "_self"}
+              rel={banner.target === "blank" ? "noopener noreferrer" : undefined}
+            >
+              <div className={`${classes.actionBanner}`}>
                 <Image src={banner.image} alt="Stojic Elektik" layout="fill" />
                 <div className={classes.wrappText}>
                   {banner.title && <h5>{banner.title}</h5>}
@@ -31,6 +42,5 @@ const ActionBanners = ({ actionBanners }) => (
     </div>
   </div>
 );
-
 export const revalidate = 30;
 export default ActionBanners;
