@@ -27,7 +27,7 @@ function GridProducts({
             {saleProducts.map((item) => (
               <ProductBoxComplexSmall
                 isSpecialOffer
-                product={item}
+                product_id={item.id}
                 key={item.id}
                 className="homeActionItem"
               />
@@ -73,7 +73,7 @@ function GridProducts({
                 {products.map((item, i) => (
                   <ProductBoxComplexSmall
                     key={item.id}
-                    product={item}
+                    product_id={item.id}
                     noBorder="noBorder"
                     className="homeProductArticle"
                   />

@@ -58,7 +58,7 @@ function CategoryItems({ buttonTabs, recommendedCategoriesProducts }) {
               <ProductBoxComplexSmall
                 className="homeBoxCategory"
                 biggerImg={index === 2 ? "biggerImg" : ""}
-                product={item}
+                product_id={item.id}
               />
             </div>
           ))}

@@ -26,37 +26,37 @@ const ProductBoxComplexSmall = ({
     const api = ApiHandler();
 
     const fetchProductDetails = api
-    .get(`/product-details/basic-data/${product_id}`)
-    .then((response) => {
-      setProduct(response?.payload?.data?.item);
-    })
-    .catch((error) => {
-      console.error("Error fetching product details:", error);
-    });
+      .get(`/product-details/basic-data/${product_id}`)
+      .then((response) => {
+        setProduct(response?.payload?.data?.item);
+      })
+      .catch((error) => {
+        console.error("Error fetching product details:", error);
+      });
 
-  const fetchProductImage = api
-    .get(`/product-details/gallery/${product_id}`)
-    .then((response) => {
-      setProductImage(response?.payload);
-    })
-    .catch((error) => {
-      console.error("Error fetching product images:", error);
-    });
+    const fetchProductImage = api
+      .get(`/product-details/gallery/${product_id}`)
+      .then((response) => {
+        setProductImage(response?.payload);
+      })
+      .catch((error) => {
+        console.error("Error fetching product images:", error);
+      });
 
-  
-  Promise.all([fetchProductDetails, fetchProductImage]).finally(() => {
-    setIsLoading(false);
-  });
-}, [product_id]);
+
+    Promise.all([fetchProductDetails, fetchProductImage]).finally(() => {
+      setIsLoading(false);
+    });
+  }, [product_id]);
 
   if (isLoading) {
     return <div>
-      <Loader/>
+      <Loader />
     </div>;
   }
 
-console.log(product, "prod:")
-console.log(productImage, "proimage:")
+  console.log(product, "prod:")
+  console.log(productImage, "proimage:")
   return (
     <div className={`${classes.container} ${classes[className]}`}>
       <div className={`${classes.wrapp}`}>
@@ -85,7 +85,7 @@ console.log(productImage, "proimage:")
             ? `${classes.noImg} ${classes["product-img"]} ${classes[noBorder]} ${classes[biggerImg]}`
             : `${classes["product-img"]} ${classes[noBorder]} ${classes[biggerImg]}`
         }
-      
+
       >
         {productImage?.gallery[0]?.image && (
           <Image
@@ -150,27 +150,27 @@ console.log(productImage, "proimage:")
           </div>
         )}
 
-        {(product?.stickers ?? []).map((sticker) => (
+        {(productImage?.stickers ?? []).map((sticker) => (
           <div className={classes["top-deal"]} key={sticker.slug}>
             <span>{sticker.name}</span>
           </div>
         ))}
 
-        {!isSpecialOffer ? null : product?.price?.discount?.amount ? ( // </div> //   <Image alt="fav-heart" src={heartImg} /> // > //   onClick={() => addToWishList(product?.id)} //   className={classes['fav-heart']} // <div
+        {!isSpecialOffer ? null : product.id?.price?.discount?.amount ? ( // </div> //   <Image alt="fav-heart" src={heartImg} /> // > //   onClick={() => addToWishList(product?.id)} //   className={classes['fav-heart']} // <div
           <div className={classes.percentSale}>
-            {product?.price?.discount?.amount}
+            {product.id?.price?.discount?.amount}
           </div>
         ) : null}
       </div>
 
-      {(product?.stickers ?? []).map((sticker) => (
+      {(product.id?.stickers ?? []).map((sticker) => (
         <div className={classes["top-deal"]} key={sticker.slug}>
           <span>{sticker.name}</span>
         </div>
       ))}
 
       {product?.inventory?.inventory_defined &&
-      product?.price?.price_defined ? (
+        product?.price?.price_defined ? (
         <div className={classes["add-to-cart"]}>
           <div
             className={classes["add-to-cart-image"]}
@@ -188,7 +188,7 @@ console.log(productImage, "proimage:")
           </a>
         </div>
       )}
-    
+
     </div>
   );
 };
