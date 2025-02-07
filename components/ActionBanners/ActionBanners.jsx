@@ -20,11 +20,8 @@ const ActionBanners = ({ actionBanners }) => (
             xl={6}
           >
             <Link
-              href={banner.url || "#"}
-              passHref
-              target={banner.target === "blank" ? "_blank" : "_self"}
-              rel={banner.target === "blank" ? "noopener noreferrer" : undefined}
-            >
+            
+            href="/" legacyBehavior>
               <div className={`${classes.actionBanner}`}>
                 <Image src={banner.image} alt="Stojic Elektik" layout="fill" />
                 <div className={classes.wrappText}>
