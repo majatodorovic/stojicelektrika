@@ -32,4 +32,5 @@ const ActionBanners = ({ actionBanners }) => (
   </div>
 );
 
+export const revalidate = 30;
 export default ActionBanners;
