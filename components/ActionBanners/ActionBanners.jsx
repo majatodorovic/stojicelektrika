@@ -23,15 +23,9 @@ const ActionBanners = ({ actionBanners }) => (
               href={banner.url || "#"}
               target={banner.target === "blank" ? "_blank" : "_self"}
               rel={banner.target === "blank" ? "noopener noreferrer" : undefined}
-            >
+          >
               <div className={`${classes.actionBanner}`}>
-                <Image
-                  key={banner.image} // Forsira re-render slike
-                  src={`${banner.image}?t=${new Date().getTime()}`} // Sprečava keširanje
-                  alt="Stojic Elektik"
-                  layout="fill"
-                  unoptimized // Isključuje Next.js optimizaciju slika
-                />
+                <Image src={banner.image} alt="Stojic Elektik" layout="fill" />
                 <div className={classes.wrappText}>
                   {banner.title && <h5>{banner.title}</h5>}
                   {banner.subtitle && <p>{banner.subtitle}</p>}
@@ -48,17 +42,5 @@ const ActionBanners = ({ actionBanners }) => (
     </div>
   </div>
 );
-
+export const revalidate = 30;
 export default ActionBanners;
-
-// Fetch podataka iz API-ja u realnom vremenu
-export async function getServerSideProps() {
-  const res = await fetch(
-    `https://api.stojic.rs/croonus-uploads/banners?t=${new Date().getTime()}`
-  );
-  const data = await res.json();
-
-  return {
-    props: { actionBanners: data },
-  };
-}
