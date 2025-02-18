@@ -23,7 +23,7 @@ const ActionBanners = ({ actionBanners }) => (
               href={banner.url || "#"}
               target={banner.target === "blank" ? "_blank" : "_self"}
               rel={banner.target === "blank" ? "noopener noreferrer" : undefined}
-          >
+            >
               <div className={`${classes.actionBanner}`}>
                 <Image src={banner.image} alt="Stojic Elektik" layout="fill" />
                 <div className={classes.wrappText}>
